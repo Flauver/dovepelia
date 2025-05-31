@@ -8,7 +8,6 @@ schema:
   author:
     - 深白
   description: |
-    笔画
    q, w, e, a, s 代表橫、豎、撇、捺、折
 
 switches:
