@@ -1,0 +1,102 @@
+schema:
+  schema_id: dovepelia
+  name: 白鸠
+  version: "0.1.0"
+  author:
+    - 深白
+  description: |
+    九键爽码
+  dependencies:
+    - stroke_dovepelia
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["中文", "西文"]
+  - name: full_shape
+    reset: 0
+    states: ["半角", "全角"]
+
+engine:
+  processors:
+    - ascii_composer
+    - key_binder
+    - recognizer
+    - speller
+    - punctuator
+    - selector         # 選字、換頁
+    - navigator        # 移動插入點
+    - express_editor
+  segmentors:
+    - abc_segmentor       # 標記輸入碼的類型
+    - matcher
+    - punct_segmentor   # 劃界，與前後方的其他編碼區分開
+    - fallback_segmentor
+  translators:
+    - echo_translator  # （無有其他結果時，）創建一個與編碼串一個模樣的候選項
+    - punct_translator  # 轉換
+    - table_translator    # 碼表式轉換
+    - reverse_lookup_translator
+
+translator:
+  dictionary: dovepelia       # 設定 table_translator 使用的詞典名
+  enable_sentence: false
+  enable_user_dict: true
+  enable_user_dict: true
+  enable_encoder: true
+  enable_sentence: false
+  max_phrase_length: 10
+  enable_commit_history: true
+  enable_completion: false
+  disable_user_dict_for_patterns:
+    - "^.{1, 5}$"
+
+speller:
+  alphabet: "qweasdzxc"
+  max_code_length: 16
+
+reverse_lookup:
+  dictionary: stroke_dovepelia
+  prefix: "`"
+  tips: 〔笔画〕
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "^`[qweas]*$"
+
+menu:
+  page_size: 9
+  alternative_select_keys: "123456789"
+
+punctuator:
+  half_shape:
+    ',' : { commit: ， }
+    '.' : { commit: 。 }
+    '<' : [ 《, 〈, «, ‹, ⟨, ˂, ˱ ]
+    '>' : [ 》, 〉, », ›, ⟩, ˃, ˲ ]
+    '/' : [ 、, ､, '/', ／, ÷ ]
+    '?' : { commit: ？ }
+    ':' : { commit: ： }
+    '"' : { pair: [ '“', '”' ] }
+    '\' : [ 、, '\', ＼ ]
+    '|' : [ ·, ・, '|', ｜, '§', '¦', '‖', ︴ ]
+    '`' : [ '`', ‵, ‶, ‷, ′, ″, ‴, ⁗ ]
+    '~' : [ '~', ～, ˜, ˷, ⸯ, ≈, ≋, ≃, ≅, ≇, ∽, ⋍, ≌, ﹏, ﹋, ﹌, ︴ ]
+    '!' : { commit: ！ }
+    '@' : [ '@', ©, ®, ℗ ]
+    '%' : [ '%', ％, '°', '℃', ‰, ‱, ℉, ℅, ℆, ℀, ℁, ⅍ ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤', ₩ ]
+    '^' : { commit: …… }
+    '&' : '&'
+    '*' : [ '*', ＊, ·, ・, ×, ※, ❂, ⁂, ☮, ☯, ☣ ]
+    '(' : （
+    ')' : ）
+    '-' : '-'
+    '_' : ——
+    '+' : '+'
+    '=' : [ '=', 々, 〃 ]
+    '[' : [ 「, 【, 〔, ［, 〚, 〘 ]
+    ']' : [ 」, 】, 〕, ］, 〛, 〙 ]
+    '{' : [ 『, 〖, ｛ ]
+    '}' : [ 』, 〗, ｝ ]
