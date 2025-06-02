@@ -3882,7 +3882,6 @@ preset_keys:
   riqi: { label: '日期', send: N }
   Escape: { label: Esc, send: Escape }
   Escape1: { label: 重输, send: Escape }
-  Clear: {label: 全清, send: Clear}
   Tab: { label: Tab, send: Tab }
   Home: { label: Home, send: Home }
   Insert: { label: Ins, send: Insert }
