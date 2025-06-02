@@ -4061,11 +4061,11 @@ preset_keys:
   9keyabc: { label: "FGQS", send: "w" }
   9keydef: { label: "CKZ", send: "e" }
   9keyghi: { label: "DJ", send: "a" }
-  9keyjkl: { label: "MY CH", send: "s" }
-  9keymno: { label: "HN ZH", send: "d" }
+  9keyjkl: { label: "MY Ch", send: "s" }
+  9keymno: { label: "HN Zh", send: "d" }
   9keypqrs: { label: "WX", send: "z" }
   9keytuv: { label: "LR0", send: "x" }
-  9keywxyz: { label: "T SH", send: "c" }
+  9keywxyz: { label: "T Sh", send: "c" }
   
   
   kb_sym1: { label: '◀', send: Eisu_toggle, select: symbols }
