@@ -47,7 +47,7 @@ translator:
   enable_sentence: false
   max_phrase_length: 10
   enable_commit_history: true
-  enable_completion: false
+  enable_completion: true
   disable_user_dict_for_patterns:
     - "^.{1, 5}$"
 
