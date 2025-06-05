@@ -56,6 +56,7 @@ speller:
   max_code_length: 16
 
 reverse_lookup:
+  enable_completion: true
   dictionary: stroke_dovepelia
   prefix: "`"
   tips: 〔笔画〕

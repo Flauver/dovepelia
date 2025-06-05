@@ -46,6 +46,7 @@ menu:
 
 translator:
   dictionary: stroke_dovepelia
+  enable_completion: true
   preedit_format:
 #   - xlit/hspnz/㇐㇑㇒㇏㇠/   # 中日韓筆畫（橫豎撇捺折）
     - xlit/qweas/⼀⼁⼃⼂⼄/   # 康熙部首（橫豎撇點折）
