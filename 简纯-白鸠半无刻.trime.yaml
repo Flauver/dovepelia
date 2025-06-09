@@ -3451,21 +3451,21 @@ preset_keyboards:
     keys:
       # 第 1 行
       - { click: liquid_keyboard_clipboard, width: 16, long_click: cut } 
-      - { click: split_word, long_click: '1', width: 22, __include: styl/key } 
-      - { click: '9keyabc', long_click: '2', width: 22, __include: styl/key }
-      - { click: '9keydef', long_click: '3', width: 22, __include: styl/key }
+      - { click: split_word, long_click: up1, width: 22, __include: styl/key } 
+      - { click: '9keyabc', long_click: up2, width: 22, __include: styl/key }
+      - { click: '9keydef', long_click: up3, width: 22, __include: styl/key }
       - { click: BS, width: 18 }
       # 第 2 行
       - { click: '，', long_click: '、', width: 16, key_back_color: off_key_back_color }
-      - { click: '9keyghi', long_click: '4', width: 22, __include: styl/key }
-      - { click: '9keyjkl', long_click: '5', width: 22, __include: styl/key }
-      - { click: '9keymno', long_click: '6', width: 22, __include: styl/key }
+      - { click: '9keyghi', long_click: up4, width: 22, __include: styl/key }
+      - { click: '9keyjkl', long_click: up5, width: 22, __include: styl/key }
+      - { click: '9keymno', long_click: up6, width: 22, __include: styl/key }
       - { click: 'Escape1', long_click: copy, width: 18, key_back_color: off_key_back_color }
       # 第 3 行
       - { click: '。', long_click: '？', width: 16, key_back_color: off_key_back_color }
-      - { click: '9keypqrs', long_click: '7', width: 22, __include: styl/key }
-      - { click: '9keytuv', long_click: '8', width: 22, __include: styl/key }
-      - { click: '9keywxyz', long_click: '9', width: 22, __include: styl/key }
+      - { click: '9keypqrs', long_click: up7, width: 22, __include: styl/key }
+      - { click: '9keytuv', long_click: up8, width: 22, __include: styl/key }
+      - { click: '9keywxyz', long_click: up9, width: 22, __include: styl/key }
       - { click: '0', long_click: paste, width: 18, key_back_color: off_key_back_color }
       # 第 4 行
       - { click: 9Keyboard_symbols, long_click: Color_switch, composing: Tab, width: 16, __include: styl/off_key }   
@@ -3805,6 +3805,15 @@ android_keys:
 
 preset_keys:
   # 安卓
+  up1: { label: " ", send: "1" }
+  up2: { label: " ", send: "2" }
+  up3: { label: " ", send: "3" }
+  up4: { label: " ", send: "4" }
+  up5: { label: " ", send: "5" }
+  up6: { label: " ", send: "6" }
+  up7: { label: " ", send: "7" }
+  up8: { label: " ", send: "8" }
+  up9: { label: " ", send: "9" }
   BRIGHTNESS_DOWN: { label: 亮度-, send: BRIGHTNESS_DOWN }
   BRIGHTNESS_UP: { label: 亮度+, send: BRIGHTNESS_UP }
   CALCULATOR: { label: 计算机, send: CALCULATOR }
@@ -3960,7 +3969,7 @@ preset_keys:
   kb_9jian: { label: '9键', send: Eisu_toggle, select: 9jian }
   kb_14jian: { label: '14键', send: Eisu_toggle, select: 14jian }
   kb_18jian: { label: '18键', send: Eisu_toggle, select: 18jian }
-  kb_26jian: { label: '26键', send: Eisu_toggle, select: default }
+  kb_26jian: { label: '26键', send: Eisu_toggle, select: 26jian }
 #键盘相互跳转
   Keyboard_26jian: { label: '英', send: Eisu_toggle, select: default }
   Keyboard_letter_26jian: { label: '中', send: Eisu_toggle, select: letter }
@@ -3997,7 +4006,7 @@ preset_keys:
   # 自定义按键
   BS: { label: '⌫', repeatable: true, send: BackSpace }
 #  select_second: { label: '.', send: . }
-  split_word: { label: "1", send: q }     #分词功能
+  split_word: { label: " ", send: q }     #分词功能
 
 #符号键盘区，解决中文状态下shift锁定导致的符号映射发生变化的问题,由于已经合理布置需要的符号，没必要这种变化
   xiegang: { label: "/", text: "/" }
@@ -4058,14 +4067,14 @@ preset_keys:
   14keym: { label: " M ", send: "m" }
   
 #配合9键键盘布局实现共键单发
-  9keyabc: { label: "2", send: "w" }
-  9keydef: { label: "3", send: "e" }
-  9keyghi: { label: "4", send: "a" }
-  9keyjkl: { label: "5", send: "s" }
-  9keymno: { label: "6", send: "d" }
-  9keypqrs: { label: "7", send: "z" }
-  9keytuv: { label: "8", send: "x" }
-  9keywxyz: { label: "9", send: "c" }
+  9keyabc: { label: " ", send: "w" }
+  9keydef: { label: " ", send: "e" }
+  9keyghi: { label: " ", send: "a" }
+  9keyjkl: { label: " ", send: "s" }
+  9keymno: { label: " ", send: "d" }
+  9keypqrs: { label: " ", send: "z" }
+  9keytuv: { label: " ", send: "x" }
+  9keywxyz: { label: " ", send: "c" }
   
   
   kb_sym1: { label: '◀', send: Eisu_toggle, select: symbols }

@@ -3960,7 +3960,7 @@ preset_keys:
   kb_9jian: { label: '9键', send: Eisu_toggle, select: 9jian }
   kb_14jian: { label: '14键', send: Eisu_toggle, select: 14jian }
   kb_18jian: { label: '18键', send: Eisu_toggle, select: 18jian }
-  kb_26jian: { label: '26键', send: Eisu_toggle, select: default }
+  kb_26jian: { label: '26键', send: Eisu_toggle, select: 26jian }
 #键盘相互跳转
   Keyboard_26jian: { label: '英', send: Eisu_toggle, select: default }
   Keyboard_letter_26jian: { label: '中', send: Eisu_toggle, select: letter }
