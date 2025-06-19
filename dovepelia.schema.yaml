@@ -50,6 +50,8 @@ translator:
   enable_completion: true
   disable_user_dict_for_patterns:
     - "^.{1, 5}$"
+  preedit_format:
+    - xlit/qweasdzxc/123456789/
 
 speller:
   alphabet: "qweasdzxc"
@@ -60,6 +62,11 @@ reverse_lookup:
   dictionary: stroke_dovepelia
   prefix: "`"
   tips: 〔笔画〕
+  preedit_format:
+    - 'xform/([qweas]+)$/$1\t（\U$1\E）/'
+    - xlit/QWEAS/一丨丿丶乙/
+  comment_format:
+    - xlit/qweasdzxc/123456789/
 
 recognizer:
   import_preset: default
