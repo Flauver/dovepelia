@@ -52,6 +52,8 @@ translator:
     - "^.{1, 5}$"
   preedit_format:
     - xlit/qweasdzxc/123456789/
+  comment_format:
+    - xlit/qweasdzxc/123456789/
 
 speller:
   alphabet: "qweasdzxc"
